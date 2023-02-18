@@ -64,6 +64,11 @@ flutter:
     - images/maserati.png
     - images/porsce.png
     - images/tog.png
+    - images/background.jpeg
+    - images/background1.jpeg
+    - images/electric.png
+    - images/suv.png
+    - images/sport.png
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
