@@ -38,6 +38,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: '^0.9.2'
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -67,8 +68,9 @@ flutter:
     - images/background.jpeg
     - images/background1.jpeg
     - images/electric.png
-    - images/suv.png
     - images/sport.png
+    - images/suv.png
+    - images/
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

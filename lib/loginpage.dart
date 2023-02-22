@@ -50,6 +50,9 @@ class loginPage extends StatelessWidget {
                             fillColor: Colors.white.withOpacity(0.8),
                             filled: true,
                             border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: Colors.black.withOpacity(0.1)),
                                 borderRadius: BorderRadius.circular(50))),
 
                         // autofocus: true,
