@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class sportcars extends StatelessWidget {
+  static const nameroute = '/Sportcars';
   final List<Map<String, dynamic>> myList = [
     {
       "nama": "BMW Grand Coupe",
@@ -62,7 +63,9 @@ class sportcars extends StatelessWidget {
               backgroundColor: Colors.white,
               toolbarHeight: 90,
               leading: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
                 icon: Icon(
                   Icons.arrow_back_ios_new,
                   size: 40,
@@ -71,7 +74,7 @@ class sportcars extends StatelessWidget {
               ),
               centerTitle: true,
               title: Text(
-                "HiCar",
+                "Sports Car",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 35,
@@ -89,6 +92,7 @@ class sportcars extends StatelessWidget {
                 Padding(padding: EdgeInsets.only(right: 10))
               ],
               bottom: AppBar(
+                automaticallyImplyLeading: false,
                 elevation: 0,
                 backgroundColor: Colors.white,
                 centerTitle: true,

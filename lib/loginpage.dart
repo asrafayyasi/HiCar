@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rentcar/homepage.dart';
 
 class loginPage extends StatelessWidget {
+  static const nameroute = '/loginpage';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,19 +87,38 @@ class loginPage extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white.withOpacity(0.8), fontSize: 12),
                       )),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(50),
-                        color: Color.fromARGB(255, 33, 33, 33)),
-                    width: 150,
-                    child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Login",
-                          style: TextStyle(color: Colors.white),
-                        )),
-                  )
+                  ElevatedButton(
+                      style: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.resolveWith<OutlinedBorder>(
+                                  (_) {
+                            return RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20));
+                          }),
+                          backgroundColor: MaterialStatePropertyAll(
+                              Color.fromARGB(255, 33, 33, 33))),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(MyHomePage.nameroute);
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 40,
+                        width: 80,
+                        child: Text("Login"),
+                      ))
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //       border: Border.all(color: Colors.white),
+                  //       borderRadius: BorderRadius.circular(50),
+                  //       color: Color.fromARGB(255, 33, 33, 33)),
+                  //   width: 150,
+                  //   child: ElevatedButton(
+                  //       onPressed: () {},
+                  //       child: Text(
+                  //         "Login",
+                  //         style: TextStyle(color: Colors.white),
+                  //       )),
+                  // )
                 ],
               ),
             ],
