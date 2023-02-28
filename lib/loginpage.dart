@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentcar/homepage.dart';
+import 'package:rentcar/newhomepage.dart';
+import 'package:rentcar/navigasi.dart';
 
 class loginPage extends StatelessWidget {
   static const nameroute = '/loginpage';
@@ -98,7 +99,7 @@ class loginPage extends StatelessWidget {
                           backgroundColor: MaterialStatePropertyAll(
                               Color.fromARGB(255, 33, 33, 33))),
                       onPressed: () {
-                        Navigator.of(context).pushNamed(MyHomePage.nameroute);
+                        Navigator.of(context).pushNamed(navigasi.nameroute);
                       },
                       child: Container(
                         alignment: Alignment.center,

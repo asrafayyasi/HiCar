@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import './homepage.dart';
+import 'package:rentcar/newhomepage.dart';
+import './newhomepage.dart';
 import './loginpage.dart';
 import './sportcars.dart';
 import './Suvcars.dart';
 import './ElectricCars.dart';
+import 'navigasi.dart';
 
 void main() {
   runApp(myApp());
@@ -15,9 +17,9 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: loginPage.nameroute,
-      home: MyHomePage(),
+      home: navigasi(),
       routes: {
-        MyHomePage.nameroute: (context) => MyHomePage(),
+        navigasi.nameroute: (context) => navigasi(),
         loginPage.nameroute: (context) => loginPage(),
         sportcars.nameroute: (context) => sportcars(),
         electric.nameroute: (context) => electric(),
