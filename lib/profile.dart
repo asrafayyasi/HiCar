@@ -12,16 +12,16 @@ class profile extends StatelessWidget {
             pinned: true,
             backgroundColor: Colors.white,
             toolbarHeight: 90,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(
-                Icons.arrow_back_ios_new,
-                size: 40,
-              ),
-              color: Colors.black,
-            ),
+            // leading: IconButton(
+            //   onPressed: () {
+            //     Navigator.of(context).pop();
+            //   },
+            //   icon: Icon(
+            //     Icons.arrow_back_ios_new,
+            //     size: 40,
+            //   ),
+            //   color: Colors.black,
+            // ),
             centerTitle: true,
             title: Text(
               "PROFILE",
