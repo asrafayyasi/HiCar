@@ -3,13 +3,26 @@ import 'package:rentcar/explore.dart';
 import 'package:rentcar/sportcars.dart';
 import 'package:rentcar/Suvcars.dart';
 import 'package:rentcar/ElectricCars.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-class MyHomePage extends StatelessWidget {
-  // final List<Widget> _pages = [
-  //   MyHomePage(),
-  //   explore(),
-  // ];
+class MyHomePage extends StatefulWidget {
   static const nameroute = '/MyHomePage';
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final List<Widget> _pages = [explore()];
+
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -456,7 +469,8 @@ class MyHomePage extends StatelessWidget {
           backgroundColor: Color.fromARGB(255, 245, 245, 245),
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.black,
-          currentIndex: 1,
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
