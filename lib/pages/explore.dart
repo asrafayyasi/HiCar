@@ -63,16 +63,7 @@ class explore extends StatelessWidget {
             pinned: true,
             backgroundColor: Colors.white,
             toolbarHeight: 90,
-            // leading: IconButton(
-            //   onPressed: () {
-            //     Navigator.of(context).pop();
-            //   },
-            //   icon: Icon(
-            //     Icons.arrow_back_ios_new,
-            //     size: 40,
-            //   ),
-            //   color: Colors.black,
-            // ),
+        
             centerTitle: true,
             title: Text(
               "Explore",
@@ -213,29 +204,6 @@ class explore extends StatelessWidget {
           }).toList()))
         ],
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   backgroundColor: Color.fromARGB(255, 245, 245, 245),
-      //   selectedItemColor: Colors.black,
-      //   unselectedItemColor: Colors.black,
-      //   items: const <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.explore),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.search),
-      //       label: 'Business',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.person),
-      //       label: 'School',
-      //     ),
-      //   ],
-      // )
     );
   }
 }

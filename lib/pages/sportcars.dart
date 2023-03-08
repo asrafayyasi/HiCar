@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rentcar/pages/detailcars.dart';
 
 class sportcars extends StatelessWidget {
   static const nameroute = '/Sportcars';
@@ -118,95 +119,101 @@ class sportcars extends StatelessWidget {
               delegate: SliverChildListDelegate(myList.map((data) {
             return Padding(
               padding: const EdgeInsets.only(right: 20, left: 20, top: 15.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                color: Color.fromARGB(255, 245, 245, 245),
-                child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Padding(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(detailcars.nameroute);
+                },
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Color.fromARGB(255, 245, 245, 245),
+                  child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "${data['nama']}",
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              ClipRRect(
-                                  child: Image.asset(
-                                'images/car1.png',
-                                width: 175,
-                                height: 80,
-                              ))
-                            ],
-                          ),
-                          Container(
-                            height: 130,
-                            width: 110,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
                               children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                        height: 20,
-                                        child: Image.asset(
-                                            "images/transmission.png")),
-                                    Text(
-                                      " ${data['jenis']}",
-                                      style: TextStyle(fontFamily: 'Poppins'),
-                                    )
-                                  ],
+                                Text(
+                                  "${data['nama']}",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold),
                                 ),
-                                Row(
-                                  children: [
-                                    Container(
-                                        height: 20,
-                                        child:
-                                            Image.asset("images/car-door.png")),
-                                    Text(
-                                      " ${data['jumlahpintu']}",
-                                      style: TextStyle(fontFamily: 'Poppins'),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                        height: 20,
-                                        child: Image.asset(
-                                            "images/speedometer.png")),
-                                    Text(
-                                      " ${data['kecepatan']}",
-                                      style: TextStyle(fontFamily: 'Poppins'),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                        height: 20,
-                                        child: Image.asset(
-                                          "images/air-conditioner.png",
-                                        )),
-                                    Text(
-                                      " ${data['ac']}",
-                                      style: TextStyle(fontFamily: 'Poppins'),
-                                    )
-                                  ],
-                                )
+                                ClipRRect(
+                                    child: Image.asset(
+                                  'images/car1.png',
+                                  width: 175,
+                                  height: 80,
+                                ))
                               ],
                             ),
-                          )
-                        ],
-                      ),
-                    )),
+                            Container(
+                              height: 130,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                          height: 20,
+                                          child: Image.asset(
+                                              "images/transmission.png")),
+                                      Text(
+                                        " ${data['jenis']}",
+                                        style: TextStyle(fontFamily: 'Poppins'),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                          height: 20,
+                                          child: Image.asset(
+                                              "images/car-door.png")),
+                                      Text(
+                                        " ${data['jumlahpintu']}",
+                                        style: TextStyle(fontFamily: 'Poppins'),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                          height: 20,
+                                          child: Image.asset(
+                                              "images/speedometer.png")),
+                                      Text(
+                                        " ${data['kecepatan']}",
+                                        style: TextStyle(fontFamily: 'Poppins'),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                          height: 20,
+                                          child: Image.asset(
+                                            "images/air-conditioner.png",
+                                          )),
+                                      Text(
+                                        " ${data['ac']}",
+                                        style: TextStyle(fontFamily: 'Poppins'),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      )),
+                ),
               ),
             );
           }).toList()))

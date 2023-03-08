@@ -17,7 +17,7 @@ class Homepage extends StatelessWidget {
           // pinned: true,
           backgroundColor: Colors.white,
           toolbarHeight: 90,
-          // leading: ,
+          leading: Container(),
           centerTitle: true,
           title: Text(
             "HiCar",

@@ -38,28 +38,28 @@ class _navigasiState extends State<navigasi> {
             SalomonBottomBarItem(
               icon: Icon(Icons.home),
               title: Text("Home"),
-              selectedColor: Colors.purple,
+              selectedColor: Colors.black,
             ),
 
             /// Likes
             SalomonBottomBarItem(
               icon: Icon(Icons.explore),
               title: Text("Explore"),
-              selectedColor: Colors.pink,
+              selectedColor: Colors.black,
             ),
 
             /// Search
             SalomonBottomBarItem(
               icon: Icon(Icons.search),
               title: Text("Search"),
-              selectedColor: Colors.orange,
+              selectedColor: Colors.black,
             ),
 
             /// Profile
             SalomonBottomBarItem(
               icon: Icon(Icons.person),
               title: Text("Profile"),
-              selectedColor: Colors.teal,
+              selectedColor: Colors.black,
             ),
           ],
         ));

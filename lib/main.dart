@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:rentcar/pages/newhomepage.dart';
-import 'pages/newhomepage.dart';
 import 'pages/loginpage.dart';
 import 'pages/sportcars.dart';
 import 'pages/Suvcars.dart';
 import 'pages/ElectricCars.dart';
 import 'pages/navigasi.dart';
 import 'pages/profile.dart';
+import 'pages/detailcars.dart';
 
 void main() {
   runApp(myApp());
@@ -17,6 +16,7 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Poppins'),
       initialRoute: loginPage.nameroute,
       home: profile(),
       routes: {
@@ -25,7 +25,8 @@ class myApp extends StatelessWidget {
         sportcars.nameroute: (context) => sportcars(),
         electric.nameroute: (context) => electric(),
         suvcars.nameroute: (context) => suvcars(),
-        profile.nameroute: (context) => profile()
+        profile.nameroute: (context) => profile(),
+        detailcars.nameroute: (context) => detailcars(),
       },
     );
   }
