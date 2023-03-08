@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:rentcar/explore.dart';
-import 'package:rentcar/sportcars.dart';
-import 'package:rentcar/Suvcars.dart';
-import 'package:rentcar/ElectricCars.dart';
-import 'package:rentcar/newhomepage.dart';
-import 'package:rentcar/search.dart';
-import 'package:rentcar/profile.dart';
+import 'package:rentcar/pages/explore.dart';
+import 'package:rentcar/pages/sportcars.dart';
+import 'package:rentcar/pages/Suvcars.dart';
+import 'package:rentcar/pages/ElectricCars.dart';
+import 'package:rentcar/pages/newhomepage.dart';
+import 'package:rentcar/pages/search.dart';
+import 'package:rentcar/pages/profile.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class navigasi extends StatefulWidget {

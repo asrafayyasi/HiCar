@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentcar/newhomepage.dart';
-import 'package:rentcar/navigasi.dart';
+import 'package:rentcar/pages/newhomepage.dart';
+import 'package:rentcar/pages/navigasi.dart';
 
 class loginPage extends StatelessWidget {
   static const nameroute = '/loginpage';

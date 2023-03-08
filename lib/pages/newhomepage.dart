@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rentcar/sportcars.dart';
-import 'package:rentcar/Suvcars.dart';
-import 'package:rentcar/ElectricCars.dart';
+import 'package:rentcar/pages/sportcars.dart';
+import 'package:rentcar/pages/Suvcars.dart';
+import 'package:rentcar/pages/ElectricCars.dart';
 
 class Homepage extends StatelessWidget {
   static const nameroute = '/HomePage';
