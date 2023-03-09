@@ -61,7 +61,6 @@ class sportcars extends StatelessWidget {
         slivers: [
           SliverAppBar(
             pinned: true,
-            backgroundColor: Colors.white,
             toolbarHeight: 90,
             leading: IconButton(
               onPressed: () {
@@ -71,13 +70,11 @@ class sportcars extends StatelessWidget {
                 Icons.arrow_back_ios_new,
                 size: 40,
               ),
-              color: Colors.black,
             ),
             centerTitle: true,
             title: Text(
               "Sports Car",
               style: TextStyle(
-                  color: Colors.black,
                   fontSize: 35,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold),
@@ -87,33 +84,10 @@ class sportcars extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(
                     Icons.person,
-                    color: Colors.black,
                     size: 40.0,
                   )),
               Padding(padding: EdgeInsets.only(right: 10))
             ],
-            bottom: AppBar(
-              automaticallyImplyLeading: false,
-              elevation: 0,
-              backgroundColor: Colors.white,
-              centerTitle: true,
-              title: Container(
-                margin: EdgeInsets.only(top: 10),
-                height: 60,
-                child: SizedBox(
-                  width: 355,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(top: 10),
-                        hintText: "Search Vehicle",
-                        hintStyle: TextStyle(),
-                        prefixIcon: Icon(Icons.search),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20))),
-                  ),
-                ),
-              ),
-            ),
           ),
           SliverList(
               delegate: SliverChildListDelegate(myList.map((data) {
@@ -126,7 +100,7 @@ class sportcars extends StatelessWidget {
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  color: Color.fromARGB(255, 245, 245, 245),
+                  color: Color.fromARGB(255, 6, 70, 99),
                   child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Padding(
@@ -141,7 +115,8 @@ class sportcars extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
                                 ),
                                 ClipRRect(
                                     child: Image.asset(
@@ -166,7 +141,9 @@ class sportcars extends StatelessWidget {
                                               "images/transmission.png")),
                                       Text(
                                         " ${data['jenis']}",
-                                        style: TextStyle(fontFamily: 'Poppins'),
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.white),
                                       )
                                     ],
                                   ),
@@ -178,7 +155,9 @@ class sportcars extends StatelessWidget {
                                               "images/car-door.png")),
                                       Text(
                                         " ${data['jumlahpintu']}",
-                                        style: TextStyle(fontFamily: 'Poppins'),
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.white),
                                       )
                                     ],
                                   ),
@@ -190,7 +169,9 @@ class sportcars extends StatelessWidget {
                                               "images/speedometer.png")),
                                       Text(
                                         " ${data['kecepatan']}",
-                                        style: TextStyle(fontFamily: 'Poppins'),
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.white),
                                       )
                                     ],
                                   ),
@@ -203,7 +184,9 @@ class sportcars extends StatelessWidget {
                                           )),
                                       Text(
                                         " ${data['ac']}",
-                                        style: TextStyle(fontFamily: 'Poppins'),
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.white),
                                       )
                                     ],
                                   )

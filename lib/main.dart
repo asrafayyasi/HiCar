@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rentcar/pages/driverdetails.dart';
+import 'package:rentcar/pages/drivingLicense.dart';
+import 'package:rentcar/pages/history.dart';
 import 'pages/loginpage.dart';
 import 'pages/sportcars.dart';
 import 'pages/Suvcars.dart';
@@ -16,7 +19,14 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Poppins'),
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+          bottomAppBarTheme: BottomAppBarTheme(),
+          fontFamily: 'Poppins',
+          appBarTheme: AppBarTheme(
+              titleTextStyle: TextStyle(color: Colors.white),
+              backgroundColor: Color.fromARGB(255, 4, 28, 50),
+              iconTheme: IconThemeData(color: Colors.white))),
       initialRoute: loginPage.nameroute,
       home: profile(),
       routes: {
@@ -27,6 +37,9 @@ class myApp extends StatelessWidget {
         suvcars.nameroute: (context) => suvcars(),
         profile.nameroute: (context) => profile(),
         detailcars.nameroute: (context) => detailcars(),
+        history.nameroute: (context) => history(),
+        driverdetails.nameroute: (context) => driverdetails(),
+        driverlicense.nameroute: (context) => driverlicense(),
       },
     );
   }

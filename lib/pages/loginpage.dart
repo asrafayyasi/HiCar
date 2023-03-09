@@ -99,7 +99,8 @@ class loginPage extends StatelessWidget {
                           backgroundColor: MaterialStatePropertyAll(
                               Color.fromARGB(255, 33, 33, 33))),
                       onPressed: () {
-                        Navigator.of(context).pushNamed(navigasi.nameroute);
+                        Navigator.of(context)
+                            .pushReplacementNamed(navigasi.nameroute);
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -107,19 +108,6 @@ class loginPage extends StatelessWidget {
                         width: 80,
                         child: Text("Login"),
                       ))
-                  // Container(
-                  //   decoration: BoxDecoration(
-                  //       border: Border.all(color: Colors.white),
-                  //       borderRadius: BorderRadius.circular(50),
-                  //       color: Color.fromARGB(255, 33, 33, 33)),
-                  //   width: 150,
-                  //   child: ElevatedButton(
-                  //       onPressed: () {},
-                  //       child: Text(
-                  //         "Login",
-                  //         style: TextStyle(color: Colors.white),
-                  //       )),
-                  // )
                 ],
               ),
             ],

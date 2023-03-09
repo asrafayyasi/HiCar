@@ -30,7 +30,9 @@ class _navigasiState extends State<navigasi> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: _pages[_selectedIndex],
+        backgroundColor: Color.fromARGB(255, 4, 28, 50),
         bottomNavigationBar: SalomonBottomBar(
+          unselectedItemColor: Colors.white,
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           items: [
@@ -38,28 +40,28 @@ class _navigasiState extends State<navigasi> {
             SalomonBottomBarItem(
               icon: Icon(Icons.home),
               title: Text("Home"),
-              selectedColor: Colors.black,
+              selectedColor: Color.fromARGB(255, 236, 179, 101),
             ),
 
             /// Likes
             SalomonBottomBarItem(
               icon: Icon(Icons.explore),
               title: Text("Explore"),
-              selectedColor: Colors.black,
+              selectedColor: Color.fromARGB(255, 236, 179, 101),
             ),
 
             /// Search
             SalomonBottomBarItem(
               icon: Icon(Icons.search),
               title: Text("Search"),
-              selectedColor: Colors.black,
+              selectedColor: Color.fromARGB(255, 236, 179, 101),
             ),
 
             /// Profile
             SalomonBottomBarItem(
               icon: Icon(Icons.person),
               title: Text("Profile"),
-              selectedColor: Colors.black,
+              selectedColor: Color.fromARGB(255, 236, 179, 101),
             ),
           ],
         ));

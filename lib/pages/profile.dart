@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:rentcar/pages/history.dart';
 
 class profile extends StatelessWidget {
   static const nameroute = '/profil';
@@ -10,7 +11,7 @@ class profile extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.white,
+            leading: Container(),
             toolbarHeight: 200,
             centerTitle: true,
             title: Container(
@@ -30,25 +31,18 @@ class profile extends StatelessWidget {
                     child: Text(
                       "Erik Ten Hag",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                   Text(
                     "tujuhkosong@gmail.com",
-                    style: TextStyle(color: Color.fromARGB(255, 125, 127, 136)),
+                    style: TextStyle(color: Colors.white),
                   )
                 ],
               ),
             ),
-            // bottom: AppBar(
-            //   elevation: 0,
-            //   leading: null,
-            //   backgroundColor: Colors.white,
-            //   centerTitle: true,
-            //   title: ,
-            // ),
           ),
           SliverList(
               delegate: SliverChildListDelegate([
@@ -56,41 +50,50 @@ class profile extends StatelessWidget {
               leading: Image(image: AssetImage("images/person.png")),
               title: Text(
                 "Personal Detail",
-                style: TextStyle(fontFamily: 'Poppins'),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
               ),
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: Icon(
+                Icons.keyboard_arrow_right,
+                color: Colors.black,
+              ),
             ),
             ListTile(
               leading: Image(image: AssetImage("images/setting.png")),
               title: Text(
                 "Settings",
-                style: TextStyle(fontFamily: 'Poppins'),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
               ),
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: Icon(Icons.keyboard_arrow_right, color: Colors.black),
             ),
             ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed(history.nameroute);
+              },
               leading: Image(image: AssetImage('images/history.png')),
               title: Text(
                 "Recent History",
-                style: TextStyle(fontFamily: 'Poppins'),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
               ),
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: Icon(Icons.keyboard_arrow_right, color: Colors.black),
             ),
             ListTile(
               leading: Image(image: AssetImage("images/faq.png")),
               title: Text(
                 "FAQ",
-                style: TextStyle(fontFamily: 'Poppins'),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
               ),
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: Icon(
+                Icons.keyboard_arrow_right,
+                color: Colors.black,
+              ),
             ),
             ListTile(
               leading: Image(image: AssetImage('images/about.png')),
               title: Text(
                 "About Us",
-                style: TextStyle(fontFamily: 'Poppins'),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
               ),
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: Icon(Icons.keyboard_arrow_right, color: Colors.black),
             )
           ]))
         ],
