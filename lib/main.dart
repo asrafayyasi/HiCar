@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:rentcar/pages/driverdetails.dart';
 import 'package:rentcar/pages/drivingLicense.dart';
 import 'package:rentcar/pages/history.dart';
-import 'pages/loginpage.dart';
+import 'pages/signup.dart';
 import 'pages/sportcars.dart';
 import 'pages/Suvcars.dart';
 import 'pages/ElectricCars.dart';
 import 'pages/navigasi.dart';
 import 'pages/profile.dart';
 import 'pages/detailcars.dart';
+import 'pages/login.dart';
 
 void main() {
   runApp(myApp());
@@ -27,11 +28,12 @@ class myApp extends StatelessWidget {
               titleTextStyle: TextStyle(color: Colors.white),
               backgroundColor: Color.fromARGB(255, 4, 28, 50),
               iconTheme: IconThemeData(color: Colors.white))),
-      initialRoute: loginPage.nameroute,
+      initialRoute: signup.nameroute,
       home: profile(),
       routes: {
         navigasi.nameroute: (context) => navigasi(),
-        loginPage.nameroute: (context) => loginPage(),
+        signup.nameroute: (context) => signup(),
+        login.nameroute: (context) => login(),
         sportcars.nameroute: (context) => sportcars(),
         electric.nameroute: (context) => electric(),
         suvcars.nameroute: (context) => suvcars(),
