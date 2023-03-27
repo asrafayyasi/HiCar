@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:rentcar/pages/history.dart';
+import 'package:rentcar/pages/aboutUs.dart';
 
 class profile extends StatelessWidget {
   static const nameroute = '/profil';
@@ -58,14 +59,6 @@ class profile extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Image(image: AssetImage("images/setting.png")),
-              title: Text(
-                "Settings",
-                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
-              ),
-              trailing: Icon(Icons.keyboard_arrow_right, color: Colors.black),
-            ),
-            ListTile(
               onTap: () {
                 Navigator.of(context).pushNamed(history.nameroute);
               },
@@ -88,6 +81,9 @@ class profile extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed(aboutUs.nameroute);
+              },
               leading: Image(image: AssetImage('images/about.png')),
               title: Text(
                 "About Us",

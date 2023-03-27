@@ -10,6 +10,7 @@ import 'pages/navigasi.dart';
 import 'pages/profile.dart';
 import 'pages/detailcars.dart';
 import 'pages/login.dart';
+import 'pages/aboutUs.dart';
 
 void main() {
   runApp(myApp());
@@ -42,6 +43,7 @@ class myApp extends StatelessWidget {
         history.nameroute: (context) => history(),
         driverdetails.nameroute: (context) => driverdetails(),
         driverlicense.nameroute: (context) => driverlicense(),
+        aboutUs.nameroute: (context) => aboutUs(),
       },
     );
   }
